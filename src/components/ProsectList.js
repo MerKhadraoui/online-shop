@@ -1,18 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { storContext } from "../context";
 import ProductItem from "./ProductItem";
-const PorductList = ({ data }) => {
-  const [cart, setCart] = useState([]);
-  const [totalBill, setTotalBill] = useState(0);
-  const addToCart = (item) => setCart((prevuStat) => [...prevuStat, item]);
-
-  const items = data.map((item, i) => (
-    <ProductItem key={i} info={item} addTocart={addToCart} />
+const PorductList = () => {
+  const store = useContext(storContext);
+  const [bill, setBill] = useState(0);
+  const items = store.data.map((item, i) => (
+    <PorductList key={i} info={item} addToCart={store.addToCart} />
   ));
-  const bill = () => setTotalBill(cart.reduce((acc, cur) => acc + cur, 0));
   return (
     <React.Fragment>
       <div>
-        <button onClick={bill}>Totall Bill</button>
+        <button onClick={() => setBill(store.bill())}>Totall Bill</button>
         <h6>{totalBill} euro </h6>
       </div>
       <ul>{items} </ul>
