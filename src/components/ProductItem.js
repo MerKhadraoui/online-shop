@@ -1,5 +1,5 @@
 import React from "react";
-import addToCart from "./ProsectList";
+
 const ProductItem = ({ info, addToCart }) => {
   const { id, productName, icon, price, inventory } = info;
   return (
