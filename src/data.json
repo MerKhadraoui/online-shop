@@ -9,14 +9,14 @@
   },
   {
     "id": 1,
-    "productName": "watermelon",
+    "productName": "awatermelon",
     "icon": "🍉",
     "price": 90,
     "inventory": 3
   },
   {
     "id": 2,
-    "productName": "pizza",
+    "productName": "apizza",
     "icon": "🍕",
     "price": 10,
     "inventory": 100

@@ -15,6 +15,8 @@ const Store = {
       return slicedProductName === userText;
     });
   },
+  filterArr: [],
+  filterCard: (elem) => Store.filterArr.push(elem),
 };
 const storContext = React.createContext(Store);
 export { Store, storContext };
