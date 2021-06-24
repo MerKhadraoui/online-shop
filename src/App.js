@@ -5,9 +5,7 @@ import Filter from "./components/Filter";
 function App() {
   const store = useContext(storContext);
   const [userInput, setUserInput] = useState("");
-  const filterArr = Store.lookUp(userInput);
-  const [filteredData, setFilteredData] = useState([]);
-  // console.log(store.filterCard(filterArr));
+
   const changeHandle = (e) => {
     setUserInput(e.target.value);
   };

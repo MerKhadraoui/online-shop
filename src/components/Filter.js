@@ -1,5 +1,5 @@
-import React, { useState, useContext } from "react";
-import { storContext } from "../context";
+import React from "react";
+
 const Filter = ({ info, filterCard }) => {
   const { id, productName, icon, price, inventory } = info;
   return (
