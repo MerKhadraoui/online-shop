@@ -4,7 +4,7 @@ const ProductItem = ({ info, addToCart }) => {
   const { id, name, category, description, price, author, type, img } = info;
   return (
     <li key={id}>
-      <img src={`${process.env.PUBLIC_URL}/${img}`} />
+      <img src={img} />
       <h1>{name}</h1> <p>{description}</p>
       <h5>{price}€</h5>
       <h6>{author}</h6> <h6>{type}</h6>
@@ -16,7 +16,9 @@ const ProductItem = ({ info, addToCart }) => {
           console.log(info);
           addToCart(info);
         }}
-      ></button>
+      >
+        Add to cart
+      </button>
     </li>
   );
 };

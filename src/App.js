@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import PorductList from "./components/ProsectList";
 import { Store, storContext } from "./context";
 import Filter from "./components/Filter";
+import "./sass/main.scss";
 function App() {
   const store = useContext(storContext);
   const [userInput, setUserInput] = useState("");
@@ -16,17 +17,21 @@ function App() {
   };
   console.log(Store.lookUp(userInput));
   const elems = Store.lookUp(userInput).map((elem, i) => (
-    <Filter key={i} info={elem} filterCard={store.filterCard} />
+    <Filter
+      key={i}
+      info={elem}
+      filterCard={userInput == !"" ? store.filterCard : ""}
+    />
   ));
   return (
     <storContext.Provider value={Store}>
       <h1>welcome to NiNa shop</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={changeHandle} value={userInput} />
-        <input type="submit" value="filter" />
-      </form>{" "}
-      <ul>{elems} </ul>
+        <input type="submit" value="search" />
+      </form>
       <PorductList />
+      <ul className="item-list">{elems} </ul>
     </storContext.Provider>
   );
 }
