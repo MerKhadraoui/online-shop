@@ -31,7 +31,7 @@ function App() {
         <input type="submit" value="search" />
       </form>
       <PorductList />
-      <ul className="item-list">{elems} </ul>
+      <ul>{elems} </ul>
     </storContext.Provider>
   );
 }
