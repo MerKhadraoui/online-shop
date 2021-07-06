@@ -20,7 +20,7 @@ function App() {
   ));
   return (
     <storContext.Provider value={Store}>
-      <h1>welcome to NiNa shop</h1>{" "}
+      <h1>welcome to NiNa shop</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={changeHandle} value={userInput} />
         <input type="submit" value="filter" />

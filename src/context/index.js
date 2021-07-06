@@ -11,7 +11,7 @@ const Store = {
     let userText = str.toLocaleLowerCase().trim();
     let newArrLength = userText.length;
     return Store.data.filter((item) => {
-      const slicedProductName = item.productName.slice(0, newArrLength);
+      const slicedProductName = item.name.slice(0, newArrLength);
       return slicedProductName === userText;
     });
   },
