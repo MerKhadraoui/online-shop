@@ -17,11 +17,7 @@ function App() {
   };
   console.log(Store.lookUp(userInput));
   const elems = Store.lookUp(userInput).map((elem, i) => (
-    <Filter
-      key={i}
-      info={elem}
-      filterCard={userInput == !"" ? store.filterCard : ""}
-    />
+    <Filter key={i} info={elem} filterCard={store.filterCard} />
   ));
   return (
     <storContext.Provider value={Store}>

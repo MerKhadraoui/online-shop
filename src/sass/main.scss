@@ -1,6 +1,6 @@
 body {
   display: flex;
-  background-color: rgb(221, 211, 211);
+  background-color: rgb(124, 124, 124);
   margin: 0;
   padding: 0;
 }
@@ -9,12 +9,10 @@ body {
   width: 50vw;
   display: flex;
   justify-content: center;
-  flex-direction: row;
 }
-.productItems ul {
+.productItems {
   border: brown 2px solid;
   width: 50vw;
   display: flex;
   justify-content: center;
-  flex-direction: row;
 }

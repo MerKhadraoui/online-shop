@@ -4,7 +4,7 @@ const Filter = ({ info, filterCard }) => {
   const { id, name, category, description, price, author, type, img } = info;
   return (
     <li className="filter-list" key={id}>
-      {/* <img src={img} />
+      <img src={img} alt={name} />
       <h1>{name}</h1>
       <h5>{price}€</h5>
       <h6>{author}</h6>
@@ -17,7 +17,7 @@ const Filter = ({ info, filterCard }) => {
         }}
       >
         add to card
-      </button> */}
+      </button>
     </li>
   );
 };
