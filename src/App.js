@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import PorductList from "./components/ProsectList";
+import PorductList from "./components/PorductList";
 import { Store, storContext } from "./context";
 import Filter from "./components/Filter";
 import "./sass/main.scss";

@@ -2,7 +2,7 @@
   "name": "online-shop",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://MerKhadraoui.github.io/online-shop",
+  "homepage": "https://github.com/MerKhadraoui/online-shop#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
@@ -54,6 +54,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MerKhadraoui/online-shop/issues"
-  },
-  "homepage": "https://github.com/MerKhadraoui/online-shop#readme"
+  }
 }
