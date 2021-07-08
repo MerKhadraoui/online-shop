@@ -6,7 +6,6 @@ import "./sass/main.scss";
 function App() {
   const store = useContext(storContext);
   const [userInput, setUserInput] = useState("");
-
   const changeHandle = (e) => {
     setUserInput(e.target.value);
   };
@@ -17,17 +16,24 @@ function App() {
   };
   console.log(Store.lookUp(userInput));
   const elems = Store.lookUp(userInput).map((elem, i) => (
-    <Filter key={i} info={elem} filterCard={store.filterCard} />
+    <Filter
+      className="itemlist"
+      key={i}
+      info={elem}
+      filterCard={store.filterCard}
+    />
   ));
   return (
     <storContext.Provider value={Store}>
       <h1>welcome to NiNa shop</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <input type="text" onChange={changeHandle} value={userInput} />
         <input type="submit" value="search" />
       </form>
-      <PorductList />
-      <ul>{elems} </ul>
+
+      <PorductList>
+        <ul>{elems} </ul>
+      </PorductList>
     </storContext.Provider>
   );
 }
