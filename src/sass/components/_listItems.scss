@@ -1,0 +1,25 @@
+.itemlist {
+  width: 20vw;
+  padding: 1rem;
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  div {
+    width: 100%;
+    height: 20rem;
+    border: 2px red dashed;
+    overflow: auto;
+  }
+}
+.carousel-content.show-2 > * {
+  width: 50%;
+}
+
+.carousel-content.show-3 > * {
+  width: calc(100% / 3);
+}
+
+.carousel-content.show-4 > * {
+  width: calc(100% / 4);
+}

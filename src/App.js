@@ -31,8 +31,10 @@ function App() {
         <input type="submit" value="search" />
       </form>
 
-      <PorductList>
-        <ul>{elems} </ul>
+      <PorductList show={3}>
+        <div style={{ padding: 8 }}>
+          <ul>{elems}</ul>
+        </div>
       </PorductList>
     </storContext.Provider>
   );
